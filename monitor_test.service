@@ -1,0 +1,11 @@
+[Unit]
+Description=One-shot monitor for process 'test'
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/monitor_test.sh
+User=root
+Group=root
+RemainAfterExit=no
